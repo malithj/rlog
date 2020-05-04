@@ -45,7 +45,6 @@ using namespace Logging::LoggingInternals;
 std::unique_ptr<Logger> logger(new Logger(__FILE__, filename, 1)); 
 logger->info("Aloha!");
 ```
-
 ## Advanced Usage: Minimizing Overhead
 Although for debugging and testing logs can be beneficial, for performance based benchmarking it is essential ideally to remove all logging information. rlog achieves this through macros defined in `logging.h`. Use a variable to specify whether logging has been enabled or not by `#define ENABLE_LOGGING 1` in the file `logging.h`. Use of macro based logging allows to run preprocessor directives so that logging information will not be available in the final binary.
 
