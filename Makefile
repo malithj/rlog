@@ -21,12 +21,13 @@ CFLAGS=-std=c++11
 TARGET=main
 BUILD_DIR=build
 MKDIR_P=mkdir -p
+SRC_DIR=src
 OUT_DIR=$(BUILD_DIR)
 INCLUDE_DIR=include
 
 all: $(OUT_DIR) $(TARGET) 
 
-%.o : %.cc
+%.o: $(SRC_DIR)/%.cc
 	@echo "Building object file: $@"	
 	$(CC) -o $(OUT_DIR)/$@ -c $^ $(CFLAGS)
 	@echo ""
