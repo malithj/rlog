@@ -1,3 +1,5 @@
+language: cpp
+
 matrix:
   include:
     # works on Precise and Trusty
@@ -48,6 +50,9 @@ before_install:
     - eval "${MATRIX_EVAL}"
 
 script:
+    ############################################################################
+    # Build main and tests                                                     #
+    ############################################################################
     - make
 
 after_script:
